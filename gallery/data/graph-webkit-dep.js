@@ -24,10 +24,10 @@ $.get('data/asset/data/webkit-dep.json', function (webkitDep) {
             categories: webkitDep.categories,
             force: {
                 // initLayout: 'circular'
-                // gravity: 0
                 // repulsion: 20,
                 edgeLength: 5,
-                repulsion: 20
+                repulsion: 20,
+                gravity: 0.2
             },
             edges: webkitDep.links
         }]

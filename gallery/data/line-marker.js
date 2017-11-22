@@ -12,7 +12,9 @@ option = {
     toolbox: {
         show: true,
         feature: {
-            dataZoom: {},
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
             dataView: {readOnly: false},
             magicType: {type: ['line', 'bar']},
             restore: {},
@@ -58,7 +60,22 @@ option = {
             },
             markLine: {
                 data: [
-                    {type: 'average', name: '平均值'}
+                    {type: 'average', name: '平均值'},
+                    [{
+                        symbol: 'none',
+                        x: '90%',
+                        yAxis: 'max'
+                    }, {
+                        symbol: 'circle',
+                        label: {
+                            normal: {
+                                position: 'start',
+                                formatter: '最大值'
+                            }
+                        },
+                        type: 'max',
+                        name: '最高点'
+                    }]
                 ]
             }
         }

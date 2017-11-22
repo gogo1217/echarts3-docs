@@ -1,3 +1,5 @@
+app.title = '世界人口总量 - 条形图';
+
 option = {
     title: {
         text: '世界人口总量',

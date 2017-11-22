@@ -4,7 +4,13 @@ option = {
         subtext: '纯属虚构'
     },
     tooltip: {
-        trigger: 'axis'
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#283b56'
+            }
+        }
     },
     legend: {
         data:['最新成交价', '预购队列']
@@ -55,7 +61,7 @@ option = {
             type: 'value',
             scale: true,
             name: '价格',
-            max: 20,
+            max: 30,
             min: 0,
             boundaryGap: [0.2, 0.2]
         },
@@ -98,9 +104,9 @@ option = {
         }
     ]
 };
-clearInterval(app.timeTicket);
+
 app.count = 11;
-app.timeTicket = setInterval(function (){
+setInterval(function (){
     axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
 
     var data0 = option.series[0].data;

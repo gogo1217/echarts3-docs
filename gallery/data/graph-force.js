@@ -1,3 +1,5 @@
+app.title = '力引导布局';
+
 myChart.showLoading();
 $.get('data/asset/data/les-miserables.gexf', function (xml) {
     myChart.hideLoading();

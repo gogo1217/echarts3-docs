@@ -23,9 +23,6 @@ option = {
             top: '90%'
         }
     ],
-    legend: {
-        data: ['line', 'line2', 'line3']
-    },
     tooltip: {
         trigger: 'item',
         axisPointer: {
@@ -68,11 +65,11 @@ option = {
                 formatter: function (param) {
                     return [
                         'Experiment ' + param.name + ': ',
-                        'upper: ' + param.data[0],
-                        'Q1: ' + param.data[1],
-                        'median: ' + param.data[2],
+                        'upper: ' + param.data[4],
                         'Q3: ' + param.data[3],
-                        'lower: ' + param.data[4]
+                        'median: ' + param.data[2],
+                        'Q1: ' + param.data[1],
+                        'lower: ' + param.data[0]
                     ].join('<br/>')
                 }
             }

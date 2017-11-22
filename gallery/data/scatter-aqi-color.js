@@ -122,7 +122,7 @@ var itemStyle = {
 };
 
 option = {
-    backgroundColor: '#333',
+    backgroundColor: '#404a59',
     color: [
         '#dd4444', '#fec42c', '#80F1BE'
     ],
@@ -173,18 +173,7 @@ option = {
         },
         axisLine: {
             lineStyle: {
-                color: '#777'
-            }
-        },
-        axisTick: {
-            lineStyle: {
-                color: '#777'
-            }
-        },
-        axisLabel: {
-            formatter: '{value}',
-            textStyle: {
-                color: '#fff'
+                color: '#eee'
             }
         }
     },
@@ -199,21 +188,11 @@ option = {
         },
         axisLine: {
             lineStyle: {
-                color: '#777'
-            }
-        },
-        axisTick: {
-            lineStyle: {
-                color: '#777'
+                color: '#eee'
             }
         },
         splitLine: {
             show: false
-        },
-        axisLabel: {
-            textStyle: {
-                color: '#fff'
-            }
         }
     },
     visualMap: [

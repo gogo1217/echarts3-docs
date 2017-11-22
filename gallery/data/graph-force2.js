@@ -1,3 +1,5 @@
+app.title = '力引导布局';
+
 function createNodes(count) {
     var nodes = [];
     for (var i = 0; i < count; i++) {
@@ -41,8 +43,8 @@ option = {
             force: {
                 // initLayout: 'circular'
                 // gravity: 0
-                repulsion: 100,
-                edgeLength: 5
+                repulsion: 60,
+                edgeLength: 2
             },
             edges: item.edges.map(function (e) {
                 return {

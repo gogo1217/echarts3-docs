@@ -39,7 +39,7 @@ option = {
         splitLine: {
             show: true,
             lineStyle: {
-                color: '#ddd',
+                color: '#999',
                 type: 'dashed'
             }
         },
@@ -60,6 +60,9 @@ option = {
         symbolSize: function (val) {
             return val[2] * 2;
         },
-        data: data
+        data: data,
+        animationDelay: function (idx) {
+            return idx * 5;
+        }
     }]
 };

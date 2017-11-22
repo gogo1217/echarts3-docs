@@ -1,3 +1,5 @@
+app.title = '笛卡尔坐标系上的热力图';
+
 var hours = ['12a', '1a', '2a', '3a', '4a', '5a', '6a',
         '7a', '8a', '9a','10a','11a',
         '12p', '1p', '2p', '3p', '4p', '5p',
@@ -22,14 +24,20 @@ option = {
     },
     xAxis: {
         type: 'category',
-        data: hours
+        data: hours,
+        splitArea: {
+            show: true
+        }
     },
     yAxis: {
         type: 'category',
-        data: days
+        data: days,
+        splitArea: {
+            show: true
+        }
     },
     visualMap: {
-        min: 1,
+        min: 0,
         max: 10,
         calculable: true,
         orient: 'horizontal',

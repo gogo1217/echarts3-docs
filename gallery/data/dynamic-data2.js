@@ -4,7 +4,7 @@ function randomData() {
     return {
         name: now.toString(),
         value: [
-            [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('-'),
+            [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
             Math.round(value)
         ]
     }
@@ -55,7 +55,7 @@ option = {
     }]
 };
 
-app.timeTicket = setInterval(function () {
+setInterval(function () {
 
     for (var i = 0; i < 5; i++) {
         data.shift();

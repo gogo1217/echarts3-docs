@@ -5,23 +5,23 @@ option = {
     },
     grid: {
         left: '3%',
-        right: '4%',
+        right: '7%',
         bottom: '3%',
         containLabel: true
     },
     tooltip : {
-        trigger: 'axis',
+        // trigger: 'axis',
         showDelay : 0,
         formatter : function (params) {
             if (params.value.length > 1) {
                 return params.seriesName + ' :<br/>'
-                   + params.value[0] + 'cm '
-                   + params.value[1] + 'kg ';
+                + params.value[0] + 'cm '
+                + params.value[1] + 'kg ';
             }
             else {
                 return params.seriesName + ' :<br/>'
-                   + params.name + ' : '
-                   + params.value + 'kg ';
+                + params.name + ' : '
+                + params.value + 'kg ';
             }
         },
         axisPointer:{
@@ -33,9 +33,19 @@ option = {
             }
         }
     },
+    toolbox: {
+        feature: {
+            dataZoom: {},
+            brush: {
+                type: ['rect', 'polygon', 'clear']
+            }
+        }
+    },
+    brush: {
+    },
     legend: {
         data: ['女性','男性'],
-        left: 'right'
+        left: 'center'
     },
     xAxis : [
         {
@@ -45,9 +55,7 @@ option = {
                 formatter: '{value} cm'
             },
             splitLine: {
-                lineStyle: {
-                    type: 'dashed'
-                }
+                show: false
             }
         }
     ],
@@ -59,9 +67,7 @@ option = {
                 formatter: '{value} kg'
             },
             splitLine: {
-                lineStyle: {
-                    type: 'dashed'
-                }
+                show: false
             }
         }
     ],
@@ -122,6 +128,24 @@ option = {
                 [169.5, 67.3], [160.0, 75.5], [172.7, 68.2], [162.6, 61.4], [157.5, 76.8],
                 [176.5, 71.8], [164.4, 55.5], [160.7, 48.6], [174.0, 66.4], [163.8, 67.3]
             ],
+            markArea: {
+                silent: true,
+                itemStyle: {
+                    normal: {
+                        color: 'transparent',
+                        borderWidth: 1,
+                        borderType: 'dashed'
+                    }
+                },
+                data: [[{
+                    name: '女性分布区间',
+                    xAxis: 'min',
+                    yAxis: 'min'
+                }, {
+                    xAxis: 'max',
+                    yAxis: 'max'
+                }]]
+            },
             markPoint : {
                 data : [
                     {type : 'max', name: '最大值'},
@@ -129,8 +153,14 @@ option = {
                 ]
             },
             markLine : {
+                lineStyle: {
+                    normal: {
+                        type: 'solid'
+                    }
+                },
                 data : [
-                    {type : 'average', name: '平均值'}
+                    {type : 'average', name: '平均值'},
+                    { xAxis: 160 }
                 ]
             }
         },
@@ -188,6 +218,24 @@ option = {
                 [170.2, 62.3], [177.8, 82.7], [179.1, 79.1], [190.5, 98.2], [177.8, 84.1],
                 [180.3, 83.2], [180.3, 83.2]
             ],
+            markArea: {
+                silent: true,
+                itemStyle: {
+                    normal: {
+                        color: 'transparent',
+                        borderWidth: 1,
+                        borderType: 'dashed'
+                    }
+                },
+                data: [[{
+                    name: '男性分布区间',
+                    xAxis: 'min',
+                    yAxis: 'min'
+                }, {
+                    xAxis: 'max',
+                    yAxis: 'max'
+                }]]
+            },
             markPoint : {
                 data : [
                     {type : 'max', name: '最大值'},
@@ -195,8 +243,14 @@ option = {
                 ]
             },
             markLine : {
+                lineStyle: {
+                    normal: {
+                        type: 'solid'
+                    }
+                },
                 data : [
-                    {type : 'average', name: '平均值'}
+                    {type : 'average', name: '平均值'},
+                    { xAxis: 170 }
                 ]
             }
         }

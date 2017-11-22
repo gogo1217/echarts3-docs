@@ -1,3 +1,5 @@
+app.title = '正负条形图';
+
 option = {
     tooltip : {
         trigger: 'axis',

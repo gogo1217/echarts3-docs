@@ -1,3 +1,5 @@
+app.title = '环形图';
+
 option = {
     tooltip: {
         trigger: 'item',

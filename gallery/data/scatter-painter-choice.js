@@ -17,8 +17,7 @@ $.get('data/asset/data/masterPainterColorChoice.json', function (json) {
             trigger: 'axis',
             axisPointer: {
                 type: 'cross'
-            },
-            zlevel: 1
+            }
         },
         xAxis: {
             type: 'value',

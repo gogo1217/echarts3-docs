@@ -111,32 +111,32 @@ option = {
         {
             name: 'I',
             type: 'scatter',
-            xAxisIndex: [0],
-            yAxisIndex: [0],
+            xAxisIndex: 0,
+            yAxisIndex: 0,
             data: dataAll[0],
             markLine: markLineOpt
         },
         {
             name: 'II',
             type: 'scatter',
-            xAxisIndex: [1],
-            yAxisIndex: [1],
+            xAxisIndex: 1,
+            yAxisIndex: 1,
             data: dataAll[1],
             markLine: markLineOpt
         },
         {
             name: 'III',
             type: 'scatter',
-            xAxisIndex: [2],
-            yAxisIndex: [2],
+            xAxisIndex: 2,
+            yAxisIndex: 2,
             data: dataAll[2],
             markLine: markLineOpt
         },
         {
             name: 'IV',
             type: 'scatter',
-            xAxisIndex: [3],
-            yAxisIndex: [3],
+            xAxisIndex: 3,
+            yAxisIndex: 3,
             data: dataAll[3],
             markLine: markLineOpt
         }

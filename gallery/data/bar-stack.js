@@ -1,3 +1,5 @@
+app.title = '堆叠柱状图';
+
 option = {
     tooltip : {
         trigger: 'axis',

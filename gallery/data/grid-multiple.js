@@ -67,10 +67,6 @@ option = {
     },
     tooltip: {
         trigger: 'axis',
-        formatter: function (params) {
-            return params[0].name + '<br/>'
-                + params[0].seriesName + ' : ' + params[0].value + ' (m^3/s)<br/>';
-        },
         axisPointer: {
             animation: false
         }
@@ -78,6 +74,18 @@ option = {
     legend: {
         data:['流量','降雨量'],
         x: 'left'
+    },
+    toolbox: {
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    axisPointer: {
+        link: {xAxisIndex: 'all'}
     },
     dataZoom: [
         {

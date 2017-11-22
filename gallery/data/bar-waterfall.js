@@ -10,7 +10,7 @@ option = {
             type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
         },
         formatter: function (params) {
-            var tar = params[0];
+            var tar = params[1];
             return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;
         }
     },

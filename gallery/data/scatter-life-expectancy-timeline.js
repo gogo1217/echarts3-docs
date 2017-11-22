@@ -1,3 +1,4 @@
+
 myChart.showLoading();
 
 $.get('data/asset/data/life-expectancy.json', function (data) {
@@ -15,7 +16,7 @@ $.get('data/asset/data/life-expectancy.json', function (data) {
 
     var sizeFunction = function (x) {
         var y = Math.sqrt(x / 5e8) + 0.1;
-        return y * 40;
+        return y * 80;
     };
     // Schema:
     var schema = [
@@ -74,9 +75,9 @@ $.get('data/asset/data/life-expectancy.json', function (data) {
                 },
                 data: []
             },
-            backgroundColor: '#333',
-            title: {
-                'text': data.timeline[0],
+            backgroundColor: '#404a59',
+            title: [{
+                text: data.timeline[0],
                 textAlign: 'center',
                 left: '63%',
                 top: '55%',
@@ -84,7 +85,16 @@ $.get('data/asset/data/life-expectancy.json', function (data) {
                     fontSize: 100,
                     color: 'rgba(255, 255, 255, 0.7)'
                 }
-            },
+            }, {
+                text: '各国人均寿命与GDP关系演变',
+                left: 'center',
+                top: 10,
+                textStyle: {
+                    color: '#aaa',
+                    fontWeight: 'normal',
+                    fontSize: 20
+                }
+            }],
             tooltip: {
                 padding: 5,
                 backgroundColor: '#222',
@@ -99,7 +109,9 @@ $.get('data/asset/data/life-expectancy.json', function (data) {
                 }
             },
             grid: {
-                left: '12%',
+                top: 100,
+                containLabel: true,
+                left: 30,
                 right: '110'
             },
             xAxis: {
@@ -115,21 +127,13 @@ $.get('data/asset/data/life-expectancy.json', function (data) {
                 splitLine: {
                     show: false
                 },
-                axisTick: {
-                    lineStyle: {
-                        color: '#ccc'
-                    }
-                },
                 axisLine: {
                     lineStyle: {
                         color: '#ccc'
                     }
                 },
                 axisLabel: {
-                    formatter: '{value} $',
-                    textStyle: {
-                        color: '#ccc'
-                    }
+                    formatter: '{value} $'
                 }
             },
             yAxis: {
@@ -145,19 +149,11 @@ $.get('data/asset/data/life-expectancy.json', function (data) {
                         color: '#ccc'
                     }
                 },
-                axisTick: {
-                    lineStyle: {
-                        color: '#ccc'
-                    }
-                },
                 splitLine: {
                     show: false
                 },
                 axisLabel: {
-                    formatter: '{value} 岁',
-                    textStyle: {
-                        color: '#ccc'
-                    }
+                    formatter: '{value} 岁'
                 }
             },
             visualMap: [
@@ -172,7 +168,10 @@ $.get('data/asset/data/life-expectancy.json', function (data) {
                         color: '#ccc'
                     },
                     inRange: {
-                        color: ['#bcd3bb', '#e88f70', '#edc1a5', '#9dc5c8', '#e1e8c8', '#7b7c68', '#e5b5b5', '#f0b489', '#928ea8', '#bda29a']
+                        color: (function () {
+                            var colors = ['#bcd3bb', '#e88f70', '#edc1a5', '#9dc5c8', '#e1e8c8', '#7b7c68', '#e5b5b5', '#f0b489', '#928ea8', '#bda29a'];
+                            return colors.concat(colors);
+                        })()
                     }
                 }
             ],

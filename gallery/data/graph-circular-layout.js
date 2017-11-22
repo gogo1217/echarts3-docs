@@ -12,12 +12,12 @@ $.get('data/asset/data/les-miserables.gexf', function (xml) {
     graph.nodes.forEach(function (node) {
         node.itemStyle = null;
         node.value = node.symbolSize;
+        node.symbolSize /= 1.5;
         node.label = {
             normal: {
-                show: node.symbolSize > 30
+                show: node.symbolSize > 10
             }
         };
-        node.label.normal.show = node.symbolSize > 30;
         node.category = node.attributes.modularity_class;
     });
     option = {
@@ -41,6 +41,9 @@ $.get('data/asset/data/les-miserables.gexf', function (xml) {
                 name: 'Les Miserables',
                 type: 'graph',
                 layout: 'circular',
+                circular: {
+                    rotateLabel: true
+                },
                 data: graph.nodes,
                 links: graph.links,
                 categories: categories,
@@ -53,6 +56,7 @@ $.get('data/asset/data/les-miserables.gexf', function (xml) {
                 },
                 lineStyle: {
                     normal: {
+                        color: 'source',
                         curveness: 0.3
                     }
                 }

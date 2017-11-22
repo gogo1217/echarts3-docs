@@ -32,7 +32,7 @@ option = {
             name:'半径模式',
             type:'pie',
             radius : [20, 110],
-            center : ['25%', 200],
+            center : ['25%', '50%'],
             roseType : 'radius',
             label: {
                 normal: {
@@ -65,7 +65,7 @@ option = {
             name:'面积模式',
             type:'pie',
             radius : [30, 110],
-            center : ['75%', 200],
+            center : ['75%', '50%'],
             roseType : 'area',
             data:[
                 {value:10, name:'rose1'},

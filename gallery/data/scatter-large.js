@@ -1,4 +1,7 @@
 option = {
+    title: {
+        text: '大规模散点图'
+    },
     tooltip : {
         trigger: 'axis',
         showDelay : 0,

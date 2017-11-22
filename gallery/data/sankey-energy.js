@@ -24,6 +24,7 @@ $.get('data/asset/data/energy.json', function (data) {
                 },
                 lineStyle: {
                     normal: {
+                        color: 'source',
                         curveness: 0.5
                     }
                 }
